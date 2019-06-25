@@ -7,22 +7,40 @@ namespace Atcoder.ABC130
     {
         public void Run()
         {
-            var first = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            double W = first[0];
-            double H = first[1];
-            var x = first[2];
-            var y = first[3];
+            var first = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
+            var N = (int)first[0];
+            var K = first[1];
+            var second = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            long sums = 0;
+            int ret = 0;
+            int index = 0;
+            //ここのiが配列の先頭からマイナスしていくためのindex
+            for (int i = 0; i < N - 1; i++)
+            {
+                if (index < N - 1)
+                {
+                    //配列を合計する部分
+                    //足し終わった個所からスタート
+                    for (int j = index; j < N; j++)
+                    {
+                        index = j;
+                        sums += second[index];
+                        if (sums >= K)
+                        {
+                            break;
+                        }
+                    }
+                }
+                //前から消していく処理をやりたいけど。。
+                if (sums >= K)
+                {
+                    ret += N - index;
+                    sums -= second[i];
+                    continue;
+                }
+            }
 
-            double minArea = W * H / 2;
-            var isMulti = (W / 2 == x) && (H / 2 == y);
-            if (isMulti)
-            {
-                Console.Write(minArea.ToString() + " 1");
-            }
-            else
-            {
-                Console.Write(minArea.ToString() + " 0");
-            }
+            Console.Write(ret);
         }
     }
 }
