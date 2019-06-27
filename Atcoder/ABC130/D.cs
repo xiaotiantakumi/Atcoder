@@ -10,36 +10,33 @@ namespace Atcoder.ABC130
             var first = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
             var N = (int)first[0];
             var K = first[1];
-            var second = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var valList = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             long sums = 0;
-            int ret = 0;
-            int index = 0;
-            //ここのiが配列の先頭からマイナスしていくためのindex
-            for (int i = 0; i < N - 1; i++)
+            long ret = 0;
+            int right = 0;
+            for (int left = 0; left < N; left++)
             {
-                if (index < N - 1)
+                while (right < N && sums < K)
                 {
-                    //配列を合計する部分
-                    //足し終わった個所からスタート
-                    for (int j = index; j < N; j++)
-                    {
-                        index = j;
-                        sums += second[index];
-                        if (sums >= K)
-                        {
-                            break;
-                        }
-                    }
+                    sums += valList[right];
+                    ++right;
                 }
-                //前から消していく処理をやりたいけど。。
-                if (sums >= K)
+
+                if (sums < K)
                 {
-                    ret += N - index;
-                    sums -= second[i];
-                    continue;
+                    break;
+                }
+                ret += N - right + 1;
+
+                if (left == right)
+                {
+                    ++right;
+                }
+                else
+                {
+                    sums -= valList[left];
                 }
             }
-
             Console.Write(ret);
         }
     }
