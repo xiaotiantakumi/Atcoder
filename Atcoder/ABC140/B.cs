@@ -7,6 +7,8 @@ namespace Atcoder.ABC140
     {
         public void Run()
         {
+            // 問題文だけでは内容理解できなかった。
+            // 解説読んでやっと何をさせたいのか理解できた。
             var N = int.Parse(Console.ReadLine());
             var Ai = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var ret = Console.ReadLine().Split(' ').Select(int.Parse).Sum();
