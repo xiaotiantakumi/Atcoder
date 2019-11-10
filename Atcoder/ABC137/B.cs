@@ -7,14 +7,27 @@ namespace Atcoder.ABC137
     {
         public void Run()
         {
-            var N = int.Parse(Console.ReadLine());
-            var inputs = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
-            double ret = 0;
-            for (int i = 0; i < N; i++)
+            var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var K = input[0] - 1;
+            var X = input[1];
+            int from = -1000000;
+            int end = 1000000;
+            if (X - K > from)
             {
-                ret += (1 / inputs[i]);
+                from = X - K;
             }
-            Console.WriteLine(1 / ret);
+
+            if (X + K < end)
+            {
+                end = X + K;
+            }
+
+            string ret = string.Empty;
+            for (int i = from; i <= end; i++)
+            {
+                ret += i.ToString() + " ";
+            }
+            Console.WriteLine(ret);
         }
     }
 }

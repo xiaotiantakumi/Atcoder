@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Atcoder.ABC137
 {
@@ -6,17 +7,11 @@ namespace Atcoder.ABC137
     {
         public void Run()
         {
-            var a = int.Parse(Console.ReadLine());
-            var s = Console.ReadLine();
-            if (a >= 3200)
-            {
-                Console.WriteLine(s);
-
-            }
-            else
-            {
-                Console.WriteLine("red");
-            }
+            var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            var A = input[0];
+            var B = input[1];
+            var ret = Math.Max(A + B, (Math.Max(A - B, A * B)));
+            Console.WriteLine(ret);
         }
     }
 }
