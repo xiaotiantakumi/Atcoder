@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Atcoder.ABC137
@@ -8,11 +9,22 @@ namespace Atcoder.ABC137
         public void Run()
         {
             var N = int.Parse(Console.ReadLine());
-            var inputs = Console.ReadLine().Split(' ').Select(double.Parse).OrderBy(x => x).ToArray();
-            double ret = inputs[0];
-            for (int i = 1; i < N; i++)
+            string preStr = string.Empty;
+            int ret = 0;
+            HashSet<string> strHash = new HashSet<string>();
+            for (int i = 0; i < N; i++)
             {
-                ret = (ret + inputs[i]) / 2;
+                var tmp = Console.ReadLine().OrderBy(x => x).ToArray();
+                var s = new string(tmp);
+                if (!strHash.Add(s))
+                {
+                    ret++;
+                }
+            }
+
+            if (strHash > )
+            {
+
             }
             Console.WriteLine(ret);
         }
