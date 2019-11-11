@@ -22,10 +22,6 @@ namespace Atcoder.ABC137
                 }
             }
 
-            if (strHash > )
-            {
-
-            }
             Console.WriteLine(ret);
         }
     }
