@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Atcoder.ABC136
 {
@@ -6,16 +7,15 @@ namespace Atcoder.ABC136
     {
         public void Run()
         {
-            var a = int.Parse(Console.ReadLine());
-            var s = Console.ReadLine();
-            if (a >= 3200)
+            var inputs = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
+            if (inputs[0] <= inputs[1] + inputs[2])
             {
-                Console.WriteLine(s);
-
+                Console.WriteLine(inputs[2] - (inputs[0] - inputs[1]));
             }
             else
             {
-                Console.WriteLine("red");
+                Console.WriteLine(0);
+
             }
         }
     }

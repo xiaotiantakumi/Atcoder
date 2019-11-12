@@ -8,13 +8,15 @@ namespace Atcoder.ABC136
         public void Run()
         {
             var N = int.Parse(Console.ReadLine());
-            var inputs = Console.ReadLine().Split(' ').Select(double.Parse).ToArray();
-            double ret = 0;
-            for (int i = 0; i < N; i++)
+            var ret = 0;
+            for (int i = 1; i <= N; i++)
             {
-                ret += (1 / inputs[i]);
+                if (i.ToString().Length % 2 == 1)
+                {
+                    ret++;
+                }
             }
-            Console.WriteLine(1 / ret);
+            Console.WriteLine(ret);
         }
     }
 }
