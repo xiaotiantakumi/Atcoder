@@ -1,9 +1,24 @@
-﻿namespace Atcoder.ABC105
+﻿using System;
+
+namespace Atcoder.ABC105
 {
     public class B : IAtcoder
     {
         public void Run()
         {
+            var N = int.Parse(Console.ReadLine());
+            for (int i = 0; i <= N / 7; i++)
+            {
+                for (int j = 0; j <= N / 4; j++)
+                {
+                    if (N == (7 * i) + (4 * j))
+                    {
+                        Console.WriteLine("Yes");
+                        return;
+                    }
+                }
+            }
+            Console.WriteLine("No");
         }
     }
 }
