@@ -16,23 +16,26 @@ namespace Atcoder.ABC110
             var Ys = Console.ReadLine().Split(' ').Select(int.Parse).OrderBy(x => x).ToArray();
 
             int Z = int.MinValue;
+
+            if (X + 1 > Xs.Max())
+            {
+
+            }
+            int from = Math.Min(X + 1, Xs.Max());
+            int end = Math.Max(Y, Xs.Min());
             // はじめi = Xとしていがが、これだと条件X<Z≤Yを満たさず、X≤Z≤Yとなってしまう。
             for (int i = X + 1; i < Y; i++)
             {
-                // ZはYsの一部である必要がないのでWAとなっているはず。
-                if (Ys.Contains(i))
+                // x1,x2,...,xN<Z
+                // y1,y2,...,yM≥Zの条件
+                if (Xs.Max() < i && Ys.Min() <= i)
                 {
                     Z = i;
+                    break;
                 }
             }
 
             if (Z == int.MinValue)
-            {
-                Console.WriteLine("War");
-                return;
-            }
-
-            if (Xs.Max() >= Z || Ys.Min() < Z)
             {
                 Console.WriteLine("War");
                 return;
