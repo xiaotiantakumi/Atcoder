@@ -12,51 +12,24 @@ namespace Atcoder.ABC146
             var B = input[1];
             var X = input[2];
 
-            long N = 1000000000;
-            long ret = long.MinValue;
+            long min = 0;
+            long max = 1000000001;
+            long mid = 0;
 
-            int index = 0;
-            long minVal = long.MaxValue;
-            long maxVal = long.MinValue;
-            while (index < 100000)
+            while (max - min > 1)
             {
-                var tmp = A * N + B * N.ToString().Length;
-                if (X < tmp)
+                mid = (min + max) / 2;
+                var price = A * mid + B * mid.ToString().Length;
+                if (X >= price)
                 {
-                    if (ret != long.MinValue)
-                    {
-                        N = N - ((N - ret) / 2);
-                    }
-                    else
-                    {
-                        N = N / 2;
-                    }
+                    min = mid;
                 }
                 else
                 {
-                    if (N >= 1000000000)
-                    {
-                        N = 1000000000;
-                    }
-                    if (ret <= N)
-                    {
-                        ret = N;
-                    }
-                    N = N + (N / 2);
-                    minVal = N;
+                    max = mid;
                 }
-
-                index++;
             }
-
-            if (ret == long.MinValue)
-            {
-                Console.WriteLine("0");
-            }
-            else
-            {
-                Console.WriteLine(ret);
-            }
+            Console.WriteLine(min);
         }
     }
 }
