@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Atcoder.ABC142
 {
@@ -7,17 +9,14 @@ namespace Atcoder.ABC142
         public void Run()
         {
             var N = int.Parse(Console.ReadLine());
-            var S = Console.ReadLine();
-            var lenS = S.Length;
-            long ret = 1;
-            for (int i = 1; i <= lenS - 1; i++)
+            var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            SortedDictionary<int, int> dic = new SortedDictionary<int, int>();
+            for (int i = 0; i < N; i++)
             {
-                if (S[i - 1] != S[i])
-                {
-                    ret += 1;
-                }
+                dic.Add(r[i], i + 1);
             }
-            Console.Write(ret);
+
+            Console.WriteLine(string.Join(" ", dic.Select(x => x.Value)));
         }
     }
 }
