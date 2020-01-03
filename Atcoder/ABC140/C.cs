@@ -7,34 +7,21 @@ namespace Atcoder.ABC140
     {
         public void Run()
         {
-            var firstLine = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
-            long N = firstLine[0];
-            var K = firstLine[1];
-            var Q = firstLine[2];
-
-            long[] Points = new long[N];
-            for (int i = 0; i < N; i++)
+            var N = int.Parse(Console.ReadLine());
+            var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            long ret = r[0];
+            for (int i = 0; i < N - 1; i++)
             {
-                Points[i] = 0;
-            }
-
-            for (int i = 0; i < Q; i++)
-            {
-                var target = int.Parse(Console.ReadLine());
-                Points[target - 1]++;
-            }
-
-            for (int i = 0; i < N; i++)
-            {
-                if (K - Q + Points[i] > 0)
+                if (i == N - 2)
                 {
-                    Console.WriteLine("Yes");
+                    ret += r[i];
                 }
                 else
                 {
-                    Console.WriteLine("No");
+                    ret += Math.Min(r[i], r[i + 1]);
                 }
             }
+            Console.WriteLine(ret);
         }
     }
 }
