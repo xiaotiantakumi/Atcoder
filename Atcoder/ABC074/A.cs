@@ -1,10 +1,14 @@
-﻿namespace Atcoder.ABC074
+﻿using System;
+
+namespace Atcoder.ABC074
 {
     public class A : IAtcoder
     {
         public void Run()
         {
-            
+            var N = int.Parse(Console.ReadLine());
+            var A = int.Parse(Console.ReadLine());
+            Console.WriteLine(N * N - A);
         }
     }
 }
