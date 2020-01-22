@@ -8,45 +8,47 @@ namespace Atcoder.ABC151
     {
         public void Run()
         {
-            var r1 = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var N = r1[0];
-            var M = r1[1];
-            int acCount = 0;
-            int waCount = 0;
-            Dictionary<string, int[]> dic = new Dictionary<string, int[]>();
+            var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var N = r[0];
+            var M = r[1];
+            var acList = new HashSet<int>();
+            Dictionary<int, int> waDic = new Dictionary<int, int>();
             for (int i = 0; i < M; i++)
             {
-                var r = Console.ReadLine().Split().Select(x => x).ToArray();
-                if (!dic.ContainsKey(r[0]))
+                var l = Console.ReadLine().Split().ToArray();
+                var t = int.Parse(l[0]);
+                var kekka = l[1];
+                if (acList.Contains(t))
                 {
-                    if (r[1] == "WA")
+                    continue;
+                }
+                if (kekka == "WA")
+                {
+                    if (!waDic.ContainsKey(t))
                     {
-                        dic.Add(r[0], new int[2] { 0, 1 });
-                        waCount++;
+                        waDic.Add(t, 1);
                     }
                     else
                     {
-                        dic.Add(r[0], new int[2] { 1, 0 });
-                        acCount++;
+                        waDic[t]++;
                     }
                 }
-                else if (dic[r[0]][0] == 0)
+                else if (kekka == "AC")
                 {
-                    if (r[1] == "WA")
-                    {
-                        dic[r[0]][1]++;
-                        waCount++;
-                    }
-                    else
-                    {
-                        dic[r[0]][0]++;
-                        acCount++;
-                    }
+                    acList.Add(t);
                 }
             }
 
-            var ret = string.Format("{0} {1}", acCount, waCount);
-            Console.WriteLine(ret);
+            var waCount = 0;
+            foreach (var ac in acList)
+            {
+                if (waDic.ContainsKey(ac))
+                {
+                    waCount += waDic[ac];
+                }
+
+            }
+            Console.WriteLine(acList.Count + " " + waCount);
         }
     }
 }
