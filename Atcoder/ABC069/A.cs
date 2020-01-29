@@ -1,10 +1,14 @@
-﻿namespace Atcoder.ABC069
+﻿using System;
+using System.Linq;
+
+namespace Atcoder.ABC069
 {
     public class A : IAtcoder
     {
         public void Run()
         {
-            
+            var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            Console.WriteLine((r[0] - 1) * (r[1] - 1));
         }
     }
 }
