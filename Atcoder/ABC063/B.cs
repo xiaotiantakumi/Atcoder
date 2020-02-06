@@ -4,7 +4,7 @@ namespace Atcoder.ABC063
 {
     public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Read();
             string str = string.Empty;

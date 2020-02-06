@@ -2,7 +2,7 @@
 {
     public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
         }
     }
