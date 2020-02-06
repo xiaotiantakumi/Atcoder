@@ -11,10 +11,12 @@ namespace Atcoder
     {
         public abstract void Run();
 
-        public static readonly Func<string> Read = () => Console.ReadLine();
-        public static readonly Func<string[]> ReadStringArray = () => Console.ReadLine().Split();
-        public static readonly Func<int[]> ReadIntArray = () => Console.ReadLine().Split().Select(int.Parse).ToArray();
-        public static readonly Func<long[]> ReadLongArray = () => Console.ReadLine().Split().Select(long.Parse).ToArray();
-        public static readonly Action<string> Cwl = str => Console.WriteLine(str);
+        protected static readonly Func<string> Read = () => Console.ReadLine();
+        protected static readonly Func<string[]> ReadStringArray = () => Console.ReadLine().Split();
+        protected static readonly Func<int> ReadInt = () => int.Parse(Console.ReadLine());
+        protected static readonly Func<long> ReadLong = () => long.Parse(Console.ReadLine());
+        protected static readonly Func<int[]> ReadIntArray = () => Console.ReadLine().Split().Select(int.Parse).ToArray();
+        protected static readonly Func<long[]> ReadLongArray = () => Console.ReadLine().Split().Select(long.Parse).ToArray();
+        protected static readonly Action<string> Cw = str => Console.WriteLine(str);
     }
 }
