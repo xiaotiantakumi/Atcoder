@@ -9,8 +9,6 @@ namespace Atcoder.ABC103
             var S = Console.ReadLine();
             var T = Console.ReadLine();
 
-            var ret = false;
-
             for (int i = T.Length - 1; i >= 0; i--)
             {
                 var take = T.Substring(T.Length - 1, 1);

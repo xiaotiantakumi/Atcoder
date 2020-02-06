@@ -9,7 +9,6 @@ namespace Atcoder.ABC136
         {
             var N = int.Parse(Console.ReadLine());
             var inputs = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
-            var ret = 0;
             for (int i = inputs.Length - 1; i >= 1; i--)
             {
                 if (inputs[i - 1] - inputs[i] == 1)
