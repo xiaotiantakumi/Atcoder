@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Atcoder.ABC154
 {
@@ -8,20 +9,15 @@ namespace Atcoder.ABC154
         public override void Run()
         {
             var N = ReadInt();
-            var r = ReadIntArray();
-            List<int> inputList = new List<int>();
-
-            for (int i = 0; i < N; i++)
+            var r = ReadIntArray().Distinct().Count();
+            if (N == r)
             {
-                var item = r[i];
-                if (inputList.Contains(item))
-                {
-                    Console.WriteLine("NO");
-                    return;
-                }
-                inputList.Add(item);
+                Console.WriteLine("YES");
             }
-            Console.WriteLine("YES");
+            else
+            {
+                Console.WriteLine("NO");
+            }
         }
     }
 }
