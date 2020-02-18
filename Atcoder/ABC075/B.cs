@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.ABC075
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
             var H = r[0];
@@ -51,6 +51,29 @@ namespace Atcoder.ABC075
                     s += num.ToString();
                 }
                 Console.WriteLine(s);
+            }
+        }
+
+        public void OtherOne()
+        {
+            var HW = ReadIntArray();
+            var H = HW[0];
+            var W = HW[1];
+
+            List<string> lineInfo = new List<string>();
+            for (int i = 0; i < HW[0]; i++)
+            {
+                lineInfo.Add(Read());
+            }
+            for (int i = 0; i < H; i++)
+            {
+                for (int j = 0; j < W; j++)
+                {
+                    if (lineInfo[i][j] == '#')
+                    {
+
+                    }
+                }
             }
         }
     }
