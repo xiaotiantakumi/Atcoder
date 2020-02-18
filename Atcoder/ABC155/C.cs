@@ -23,10 +23,11 @@ namespace Atcoder.ABC155
                 }
             }
             var dic2 = dic.OrderByDescending(x => x.Value);
-            List<string> retList = new List<string>();
+            HashSet<string> retList = new HashSet<string>();
+            var max = dic2.Max(x => x.Value);
             foreach (var pair in dic2)
             {
-                if (pair.Value == dic2.Max(x => x.Value))
+                if (pair.Value == max)
                 {
                     retList.Add(pair.Key);
                 }
