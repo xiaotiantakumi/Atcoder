@@ -20,15 +20,26 @@ namespace Atcoder.ABC056
             {
                 checkPos.Add(ReadIntArray());
             }
-            List<Tuple<int, int>> ret = new List<Tuple<int, int>>();
-            foreach (var position in positions)
+
+            int[] retList = new int[N];
+            for (int i = 0; i < N; i++)
             {
-                int tmpRet = 0;
-                for (int i = 0; i < M; i++)
+                double distance = double.MaxValue;
+                for (int j = 0; j < M; j++)
                 {
-                    var distance = Math.Abs(position[0] - checkPos[i][0]) + Math.Abs(position[1] - checkPos[i][1]);
-                    ret.Add(new Tuple<int, int>(i, distance));
+                    var tmpDistance = Math.Abs(positions[i][0] - checkPos[j][0]) +
+                                      Math.Abs(positions[i][1] - checkPos[j][1]);
+                    if (tmpDistance < distance)
+                    {
+                        distance = Math.Min(distance, tmpDistance);
+                        retList[i] = j + 1;
+                    }
                 }
+            }
+
+            foreach (var item in retList)
+            {
+                Console.WriteLine(item);
             }
         }
     }
