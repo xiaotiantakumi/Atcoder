@@ -6,14 +6,21 @@ namespace Atcoder.ABC056
     {
         public override void Run()
         {
-            var r = ReadIntArray();
-            if (r[0] + r[1] >= 24)
+            var ab = ReadStringArray();
+            if (ab[0] == "H")
             {
-                Console.WriteLine(r[0] + r[1] - 24);
+                Console.WriteLine(ab[1]);
             }
             else
             {
-                Console.WriteLine(r[0] + r[1]);
+                if (ab[1] == "H")
+                {
+                    Console.WriteLine("D");
+                }
+                else
+                {
+                    Console.WriteLine("H");
+                }
             }
         }
     }
