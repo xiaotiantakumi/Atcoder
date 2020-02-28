@@ -1,10 +1,14 @@
-﻿namespace Atcoder.ABC055
+﻿using System;
+
+namespace Atcoder.ABC055
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
-            
+            var N = ReadInt();
+            var cpon = N / 15;
+            Console.WriteLine(N * 800 - 200 * cpon);
         }
     }
 }
