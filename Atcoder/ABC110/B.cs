@@ -3,25 +3,23 @@ using System.Linq;
 
 namespace Atcoder.ABC110
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
-            var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var X = r[2];
-            var Y = r[3];
-            var xs = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var ys = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var maxX = xs.Max();
-            var minY = ys.Min();
-            for (int i = X + 1; i <= Y; i++)
+            var nmxy = ReadIntArray();
+            var condX = ReadIntArray().Max();
+            var condY = ReadIntArray().Min();
+            for (int i = nmxy[2] + 1; i <= nmxy[3]; i++)
             {
-                if (maxX < i && minY >= i)
+                if (condX < i &&
+                    condY >= i)
                 {
                     Console.WriteLine("No War");
                     return;
                 }
             }
+
             Console.WriteLine("War");
         }
     }
