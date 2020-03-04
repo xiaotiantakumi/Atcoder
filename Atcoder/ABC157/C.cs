@@ -17,14 +17,13 @@ namespace Atcoder.ABC157
                 pairs.Add(new int[] { r[0], r[1] });
             }
 
-            for (int i = 1; i < 1000; i++)
+            for (int i = 0; i < 1000; i++)
             {
                 if (i.ToString().Length < nm[0])
                 {
                     continue;
                 }
-                if (pairs.All(item => item[0] <= i.ToString().Length &&
-                                      i.ToString()[item[0] - 1].ToString() == item[1].ToString()))
+                if (pairs.All(item => i.ToString()[item[0] - 1].ToString() == item[1].ToString()))
                 {
                     Console.WriteLine(i.ToString());
                     return;
