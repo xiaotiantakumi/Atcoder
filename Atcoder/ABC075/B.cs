@@ -8,49 +8,47 @@ namespace Atcoder.ABC075
     {
         public override void Run()
         {
-            var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var H = r[0];
-            var W = r[1];
-            List<string> bord = new List<string>();
-            for (int i = 0; i < H; i++)
+            var HW = ReadIntArray();
+            int[] dx = new int[] { 0, 1, 1, 1, 0, -1, -1, -1 };
+            int[] dy = new int[] { -1, -1, 0, 1, 1, 1, 0, -1 };
+            List<char[]> graph = new List<char[]>();
+            for (int i = 0; i < HW[0]; i++)
             {
-                bord.Add(Console.ReadLine());
+                graph.Add(Read().ToCharArray());
             }
 
-            int[] dx = new int[8] { 1, 1, 1, 0, 0, -1, -1, -1 };
-            int[] dy = new int[8] { 1, 0, -1, 1, -1, 1, 0, -1 };
-
-            List<string> ret = new List<string>();
-            for (int i = 0; i < H; i++)
+            for (int height = 0; height < HW[0]; height++)
             {
-                string s = string.Empty;
-                for (int j = 0; j < W; j++)
+                for (int width = 0; width < HW[1]; width++)
                 {
-                    int num = 0;
-                    if (bord[i][j] == '#')
-                    {
-                        s += '#';
-                        continue;
-                    }
 
-                    for (int k = 0; k < 8; k++)
+                    if (graph[height][width] == '.')
                     {
-                        int difx = i + dy[k];
-                        int dify = j + dx[k];
-                        if (difx < 0 || W <= difx || dify < 0 || H <= dify)
+                        int countBom = 0;
+                        for (int i = 0; i < dx.Length; i++)
                         {
-                            continue;
+                            if (width + dx[i] < 0 ||
+                                width + dx[i] >= HW[1] ||
+                                height + dy[i] < 0 ||
+                                height + dy[i] >= HW[0])
+                            {
+                                continue;
+                            }
+
+                            if (graph[height + dy[i]][width + dx[i]] == '#')
+                            {
+                                countBom++;
+                            }
                         }
 
-                        if (bord[difx][dify] == '#')
-                        {
-                            num++;
-                        }
+                        graph[height][width] = countBom.ToString().ToCharArray()[0];
                     }
-
-                    s += num.ToString();
                 }
-                Console.WriteLine(s);
+            }
+
+            foreach (var row in graph)
+            {
+                Console.WriteLine(new string(row));
             }
         }
 
