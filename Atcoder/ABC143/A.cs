@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC143
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var input = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var dif = input[0] - input[1] * 2;

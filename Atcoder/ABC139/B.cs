@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC139
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             // この問題、ABC101のCに近いような気がする
             // 割り算やって切り上げるという部分

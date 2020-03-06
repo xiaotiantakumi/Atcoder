@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC153
 {
-    public class D : IAtcoder
+    public class D : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var H = long.Parse(Console.ReadLine());
             long numEnemy = 1;

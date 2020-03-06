@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC086
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var points = int.Parse(Console.ReadLine());
             bool flg = true;

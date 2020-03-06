@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC102
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             if (N % 2 == 0)

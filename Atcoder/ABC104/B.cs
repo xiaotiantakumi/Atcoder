@@ -4,9 +4,9 @@ using System.Text.RegularExpressions;
 
 namespace Atcoder.ABC104
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Console.ReadLine();
 

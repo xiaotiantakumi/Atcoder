@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC078
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = Console.ReadLine().Split();
             if (r[0].CompareTo(r[1]) == 0)

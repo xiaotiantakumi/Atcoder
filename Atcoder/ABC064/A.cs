@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC064
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = int.Parse(Console.ReadLine().Replace(" ", string.Empty));
             if (r % 4 == 0)

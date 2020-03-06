@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.OtherRatedCon.keyence2020
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var H = int.Parse(Console.ReadLine());
             var W = int.Parse(Console.ReadLine());

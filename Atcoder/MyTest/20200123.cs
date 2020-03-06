@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.MyTest
 {
-    public class A20200123 : IAtcoder
+    public class A20200123 : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var tmp = Combination(3);
         }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Atcoder.ABC110
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Console.ReadLine();
             var T = Console.ReadLine();

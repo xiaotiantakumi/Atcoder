@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC099
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             if (N >= 1000)

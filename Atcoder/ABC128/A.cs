@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC128
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
         }
     }

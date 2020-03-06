@@ -1,8 +1,8 @@
 ﻿namespace Atcoder.ABC052
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
         }
     }

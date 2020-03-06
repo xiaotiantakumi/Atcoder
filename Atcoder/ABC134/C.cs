@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC134
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             int[] As = new int[N];

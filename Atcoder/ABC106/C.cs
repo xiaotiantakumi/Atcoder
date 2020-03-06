@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC106
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Console.ReadLine();
             int K;

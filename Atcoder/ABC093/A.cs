@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC093
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Console.ReadLine();
             if (S.Contains("a") &&

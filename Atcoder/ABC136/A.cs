@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC136
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var inputs = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             if (inputs[0] <= inputs[1] + inputs[2])

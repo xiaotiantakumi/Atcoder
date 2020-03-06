@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.OtherRatedCon.Num6Dowango
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
         }
     }

@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC151
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var array = "abcdefghijklmnopqrstuvwxyz";
             var r = Console.ReadLine();

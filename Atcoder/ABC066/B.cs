@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC066
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Console.ReadLine();
             for (int i = S.Length - 2; i >= 0; i -= 2)

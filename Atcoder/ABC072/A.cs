@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC072
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = Console.ReadLine().Split().Select(int.Parse).ToArray();
             var ret = r[0] - r[1];

@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC089
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = long.Parse(Console.ReadLine());
             string m = "MARCH";

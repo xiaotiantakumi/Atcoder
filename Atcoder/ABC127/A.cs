@@ -2,9 +2,9 @@
 using System.Linq;
 namespace Atcoder.ABC127
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
 
         }

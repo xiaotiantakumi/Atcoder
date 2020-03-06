@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC140
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             Console.WriteLine(N * N * N);

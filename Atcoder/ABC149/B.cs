@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC149
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = Console.ReadLine().Split().Select(long.Parse).ToArray();
             var A = r[0];

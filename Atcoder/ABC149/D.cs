@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.ABC149
 {
-    public class D : IAtcoder
+    public class D : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             
         }

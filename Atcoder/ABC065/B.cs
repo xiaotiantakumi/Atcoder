@@ -3,9 +3,9 @@ using System.Collections.Generic;
 
 namespace Atcoder.ABC065
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             Dictionary<int, int> input = new Dictionary<int, int>();

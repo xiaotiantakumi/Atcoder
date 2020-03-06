@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC069
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = Console.ReadLine();
             var len = r.Length - 2;

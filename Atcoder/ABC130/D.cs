@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC130
 {
-    public class D : IAtcoder
+    public class D : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var first = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
             var N = (int)first[0];

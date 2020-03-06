@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC141
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             string S = Console.ReadLine();
             switch (S)

@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.ABC110
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var fLine = Console.ReadLine().Split(' ');
             List<int> tmpList = new List<int>();

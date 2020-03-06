@@ -2,9 +2,9 @@
 using System.Linq;
 namespace Atcoder.ABC109
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var firstLine = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             var A = firstLine[0];

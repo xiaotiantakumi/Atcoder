@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.ABC145
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             List<int> Xs = new List<int>();

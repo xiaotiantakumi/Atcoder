@@ -6,9 +6,9 @@ using System.Text;
 namespace Atcoder.Algorithm
 {
     // ABC146のC
-    class BinarySearch : IAtcoder
+    class BinarySearch : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var f = Console.ReadLine().Split().Select(long.Parse).ToArray();
             long A = f[0];

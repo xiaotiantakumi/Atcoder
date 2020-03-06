@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC147
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var S = Console.ReadLine().ToCharArray();
             int ret = 0;

@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC105
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             for (int i = 0; i <= N / 7; i++)

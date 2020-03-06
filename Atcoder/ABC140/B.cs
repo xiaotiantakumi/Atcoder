@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC140
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             // 問題文だけでは内容理解できなかった。
             // 解説読んでやっと何をさせたいのか理解できた。

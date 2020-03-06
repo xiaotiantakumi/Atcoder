@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC130
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var first = Console.ReadLine().Split(' ').Select(int.Parse).ToArray();
             if (first[0] < first[1])

@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.OtherRatedCon.Num6Dowango
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             List<Tuple<string, int>> tpList = new List<Tuple<string, int>>();

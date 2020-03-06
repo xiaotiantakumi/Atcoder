@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.ABC149
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             List<int> primes = new List<int>();
             int N = int.Parse(Console.ReadLine());

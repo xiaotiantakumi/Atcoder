@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC142
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             double N = double.Parse(Console.ReadLine());
             int oddCount = 0;

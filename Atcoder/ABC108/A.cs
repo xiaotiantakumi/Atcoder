@@ -2,9 +2,9 @@
 using System.Linq;
 namespace Atcoder.ABC108
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var K = int.Parse(Console.ReadLine());
             var A = K / 2;

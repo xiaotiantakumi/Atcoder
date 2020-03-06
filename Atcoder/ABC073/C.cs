@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace Atcoder.ABC073
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             Dictionary<int, int> dic = new Dictionary<int, int>();

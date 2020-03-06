@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC086
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r = int.Parse(Console.ReadLine().Replace(" ", string.Empty));
             for (int i = 1; i <= 1000; i++)

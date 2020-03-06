@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC133
 {
-    public class C : IAtcoder
+    public class C : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var first = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
             long result = long.MaxValue;

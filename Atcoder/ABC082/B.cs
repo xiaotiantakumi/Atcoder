@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC082
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var s = new string(Console.ReadLine().OrderBy(x => x).ToArray());
             var t = new string(Console.ReadLine().OrderByDescending(x => x).ToArray());

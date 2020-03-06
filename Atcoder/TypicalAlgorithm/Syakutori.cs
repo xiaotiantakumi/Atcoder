@@ -4,9 +4,9 @@ using System.Linq;
 namespace Atcoder.TypicalAlgorithm
 {
     //ABC130のDより
-    public class Syakutori : IAtcoder
+    public class Syakutori : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var first = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
             var N = (int)first[0];

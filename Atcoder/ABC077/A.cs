@@ -2,9 +2,9 @@
 
 namespace Atcoder.ABC077
 {
-    public class A : IAtcoder
+    public class A : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var r1 = Console.ReadLine();
             var r2 = Console.ReadLine();

@@ -3,9 +3,9 @@ using System.Linq;
 
 namespace Atcoder.ABC088
 {
-    public class B : IAtcoder
+    public class B : AtcoderBase
     {
-        public void Run()
+        public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
             bool isAlice = true;
