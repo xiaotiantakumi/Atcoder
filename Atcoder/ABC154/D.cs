@@ -17,10 +17,18 @@ namespace Atcoder.ABC154
 
             var len = NK[0] - NK[1];
             var posFrom = 0;
-            int maxValue = 0;
+            int maxValue = ps.Skip(0).Take(NK[1]).Sum();
             for (int i = 0; i <= len; i++)
             {
-                var tmp = ps.Skip(i).Take(NK[1]).Sum();
+                int tmp;
+                if (i == 0)
+                {
+                    tmp = maxValue - ps[i] + ps[len + i];
+                }
+                else
+                {
+                    tmp = ps.Skip(i).Take(NK[1]).Sum();
+                }
                 if (maxValue < tmp)
                 {
                     posFrom = i;
