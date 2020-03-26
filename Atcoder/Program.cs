@@ -11,7 +11,7 @@ namespace Atcoder
     {
         static void Main(string[] args)
         {
-
+            
         }
     }
 }
