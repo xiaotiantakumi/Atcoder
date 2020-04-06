@@ -18,5 +18,6 @@ namespace Atcoder
         protected static readonly Func<int[]> ReadIntArray = () => Console.ReadLine().Split().Select(int.Parse).ToArray();
         protected static readonly Func<long[]> ReadLongArray = () => Console.ReadLine().Split().Select(long.Parse).ToArray();
         protected static readonly Action<string> Cw = str => Console.WriteLine(str);
+        protected const long COMDIV = 1000000007;
     }
 }

@@ -1,9 +1,15 @@
-﻿namespace Atcoder.ABC041
+﻿using System;
+using System.Linq;
+
+namespace Atcoder.ABC041
 {
     public class B : AtcoderBase
     {
         public override void Run()
         {
+            var ABC = Console.ReadLine().Split().Select(long.Parse).ToArray();
+            var ret = ((ABC[0] * ABC[1]) % COMDIV) * ABC[2] % COMDIV;
+            Console.WriteLine(ret);
         }
     }
 }
