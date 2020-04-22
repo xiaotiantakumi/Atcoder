@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Atcoder.ABC039
+namespace Atcoder.ABC.ABC039
 {
     public class B : AtcoderBase
     {

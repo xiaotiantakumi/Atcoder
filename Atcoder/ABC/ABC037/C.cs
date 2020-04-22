@@ -1,4 +1,4 @@
-﻿namespace Atcoder.ABC037
+﻿namespace Atcoder.ABC.ABC037
 {
     public class C : AtcoderBase
     {

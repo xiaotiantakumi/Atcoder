@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Linq;
 
-namespace Atcoder.ABC035
+namespace Atcoder.ABC.ABC035
 {
     public class A : AtcoderBase
     {
