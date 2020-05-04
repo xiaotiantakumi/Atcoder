@@ -17,6 +17,11 @@ namespace Atcoder
         {
             
         }
+
+        static long GetMin(params long[] args)
+        {
+            return args.Min();
+        }
         
     }
 }
