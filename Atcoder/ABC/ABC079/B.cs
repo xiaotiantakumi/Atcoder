@@ -17,27 +17,11 @@ namespace Atcoder.ABC079
         {
             if (val == 0) return 2;
             if (val == 1) return 1;
-            long left;
-            long right;
-            if (memo.ContainsKey(val - 1))
+            if (!memo.ContainsKey(val))
             {
-                left = memo[val - 1];
+                memo[val] = Cal(val - 1) + Cal(val - 2);
             }
-            else
-            {
-                left = Cal(val - 1);
-                memo.Add(val - 1, left);
-            }
-            if (memo.ContainsKey(val - 2))
-            {
-                right = memo[val - 2];
-            }
-            else
-            {
-                right = Cal(val - 2);
-                memo.Add(val - 2, right);
-            }
-            return left + right;
+            return memo[val];
         }
     }
 }
