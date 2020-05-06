@@ -8,27 +8,36 @@ namespace Atcoder.ABC079
     {
         public override void Run()
         {
-            var N = int.Parse(Console.ReadLine());
-            Queue<long> queue = new Queue<long>();
-            int counter = 0;
-            while (counter != N)
+            var n = int.Parse(Console.ReadLine());
+            Console.WriteLine(Cal(n));
+        }
+
+        static Dictionary<int, long> memo = new Dictionary<int, long>();
+        static long Cal(int val)
+        {
+            if (val == 0) return 2;
+            if (val == 1) return 1;
+            long left;
+            long right;
+            if (memo.ContainsKey(val - 1))
             {
-                if (counter == 0)
-                {
-                    queue.Enqueue(2);
-                }
-                else if (counter == 1)
-                {
-                    queue.Enqueue(1);
-                }
-                else
-                {
-                    queue.Enqueue(queue.Sum());
-                    queue.Dequeue();
-                }
-                counter++;
+                left = memo[val - 1];
             }
-            Console.WriteLine(queue.Sum());
+            else
+            {
+                left = Cal(val - 1);
+                memo.Add(val - 1, left);
+            }
+            if (memo.ContainsKey(val - 2))
+            {
+                right = memo[val - 2];
+            }
+            else
+            {
+                right = Cal(val - 2);
+                memo.Add(val - 2, right);
+            }
+            return left + right;
         }
     }
 }
