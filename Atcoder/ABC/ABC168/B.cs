@@ -1,9 +1,21 @@
-﻿namespace Atcoder.ABC.ABC168
+﻿using System;
+
+namespace Atcoder.ABC.ABC168
 {
     public class B : AtcoderBase
     {
         public override void Run()
         {
+            var K = int.Parse(Console.ReadLine());
+            var S = Console.ReadLine();
+            if (K >= S.Length)
+            {
+                Console.WriteLine(S);
+            }
+            else
+            {
+                Console.WriteLine(S.Substring(0, K) + "...");
+            }
         }
     }
 }
