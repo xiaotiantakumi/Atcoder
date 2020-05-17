@@ -7,17 +7,35 @@ namespace Atcoder.ABC131
     {
         public override void Run()
         {
-            var input = Console.ReadLine().Split(' ').Select(long.Parse).ToArray();
-            var A = input[0];
-            var B = input[1];
-            var C = input[2];
-            var D = input[3];
-            var CdivideCount = (B / C) - ((A - 1) / C);
-            var DdivideCount = (B / D) - ((A - 1) / D);
-            var CDdivideCount = (B / (C * D)) - ((A - 1) / (C * D));
-            var len = B - A + 1;
-            var ret = len - (CdivideCount + DdivideCount - CDdivideCount);
+            var ABCD = Console.ReadLine().Split().Select(long.Parse).ToArray();
+            var A = ABCD[0];
+            var B = ABCD[1];
+            var C = ABCD[2];
+            var D = ABCD[3];
+
+            var divC = B / C - (A - 1) / C;
+            var divD = B / D - (A - 1) / D;
+            var l = Lcm(C, D);
+            var divCD = B / l - (A - 1) / l;
+            var ret = (B - A + 1) - (divC + divD - divCD);
             Console.WriteLine(ret);
+        }
+
+        public static long Lcm(long a, long b)
+        {
+            return a * (b / Gcd(a, b));
+        }
+        public static long Gcd(long a, long b)
+        {
+            if (a < b)
+                return Gcd(b, a);
+            while (b != 0)
+            {
+                var remainder = a % b;
+                a = b;
+                b = remainder;
+            }
+            return a;
         }
     }
 }
