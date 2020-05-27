@@ -64,5 +64,18 @@ namespace ConsoleApp1
             }
             return res;
         }
+
+        public static T Median<T>(this IList<T> items)
+        {
+            if (items == null || items.Count <= 0) return default(T);
+            List<T> sortedItems = new List<T>(items);
+            sortedItems.Sort();
+            if (sortedItems.Count % 2 == 0)
+            {
+                return sortedItems[sortedItems.Count / 2];
+            }
+
+            return default(T);
+        }
     }
 }

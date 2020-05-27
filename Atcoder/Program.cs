@@ -6,7 +6,7 @@ using System.ComponentModel.Design;
 using System.IO.Compression;
 using System.Linq;
 using System.Numerics;
-using System.Text;
+using Console = System.Console;
 
 namespace Atcoder
 {
@@ -18,10 +18,5 @@ namespace Atcoder
             
         }
 
-        static long GetMin(params long[] args)
-        {
-            return args.Min();
-        }
-        
     }
 }
