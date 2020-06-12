@@ -6,6 +6,7 @@ using System.ComponentModel.Design;
 using System.IO.Compression;
 using System.Linq;
 using System.Numerics;
+using System.Text;
 using Console = System.Console;
 
 namespace Atcoder
@@ -13,10 +14,11 @@ namespace Atcoder
     class Program
     {
         private const long COMDIV = 1000000007;
+
         static void Main(string[] args)
         {
             
-        }
 
+        }
     }
 }
