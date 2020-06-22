@@ -7,6 +7,7 @@ using System.IO.Compression;
 using System.Linq;
 using System.Numerics;
 using System.Text;
+using System.Text.RegularExpressions;
 using Console = System.Console;
 
 namespace Atcoder
@@ -18,7 +19,6 @@ namespace Atcoder
         static void Main(string[] args)
         {
             
-
         }
     }
 }
