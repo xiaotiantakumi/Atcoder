@@ -1,9 +1,15 @@
-﻿namespace Atcoder.ABC.ABC011
+﻿using System;
+using System.Linq;
+
+namespace Atcoder.ABC.ABC011
 {
     public class B : AtcoderBase
     {
         public override void Run()
         {
+            var S = Console.ReadLine();
+            var ret = new string(S.ToUpper().Take(1).ToArray()) + new string(S.Skip(1).ToArray()).ToLower();
+            Console.WriteLine(ret);
         }
     }
 }
