@@ -8,7 +8,7 @@ namespace Atcoder.ABC.ABC006
         public override void Run()
         {
             var n = int.Parse(Console.ReadLine());
-            var tori = new Program.Torib();
+            var tori = new Torib();
             Console.WriteLine(tori.F(n));
         }
 
