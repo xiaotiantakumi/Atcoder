@@ -9,7 +9,7 @@ namespace Atcoder.OtherRatedCon.三井住友信託銀行プログラミングコ
         {
             var r1 = Console.ReadLine().Split().Select(int.Parse).ToArray();
             var r2 = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            Console.WriteLine(r1[0] == r2[0] ? 0 : 1)
+            Console.WriteLine(r1[0] == r2[0] ? 0 : 1);
         }
     }
 }
