@@ -39,7 +39,7 @@ namespace Atcoder.ABC.ABC006
                 }
                 else
                 {
-                    dic[val] = F(val - 1) % 10007 + F(val - 2) % 10007 + F(val - 3) % 10007;
+                    dic[val] = (F(val - 1)  + F(val - 2)  + F(val - 3)) % 10007;
                     return dic[val];
                 }
             }

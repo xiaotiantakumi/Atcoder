@@ -6,12 +6,14 @@ using System.ComponentModel.Design;
 using System.IO.Compression;
 using System.Linq;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using Console = System.Console;
 
 namespace Atcoder
 {
+
     class Program
     {
         private const long COMDIV = 1000000007;
