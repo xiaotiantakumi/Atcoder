@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Atcoder.ARC.ARC002
+namespace Atcoder.ARC.ARC022
 {
     public class A : AtcoderBase
     {
