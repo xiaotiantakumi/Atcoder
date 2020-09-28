@@ -6,7 +6,6 @@ namespace Atcoder.ABCLike.ACL_Beginner_Contest
     {
         public override void Run()
         {
-            }
         }
     }
 }
