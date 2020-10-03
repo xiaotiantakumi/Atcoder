@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Atcoder.Other.第1回_ドワンゴからの挑戦状_予選
+﻿namespace Atcoder.Other.第2回_ドワンゴからの挑戦状_本選
 {
     public class A : AtcoderBase
     {
