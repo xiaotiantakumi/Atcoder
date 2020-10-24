@@ -1,6 +1,6 @@
-﻿namespace Atcoder.ARC.ARC008
+﻿namespace Atcoder.ARC.ARC009
 {
-    public class C : AtcoderBase
+    public class E : AtcoderBase
     {
         public override void Run()
         {
