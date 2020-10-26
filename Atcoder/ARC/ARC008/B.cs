@@ -44,8 +44,7 @@ namespace Atcoder.ARC.ARC008
                     Console.WriteLine(-1);
                     return;
                 }
-
-                var tmp = Math.Ceiling((double)namePair.Value / (double)dicKits[namePair.Key]);
+                var tmp = (namePair.Value + dicKits[namePair.Key] - 1) / dicKits[namePair.Key];
                 ret = Math.Max(ret, (int)tmp);
             }
 
