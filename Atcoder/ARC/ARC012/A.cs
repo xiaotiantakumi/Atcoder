@@ -1,4 +1,4 @@
-﻿namespace Atcoder.ARC.ARC011
+﻿namespace Atcoder.ARC.ARC012
 {
     public class A : AtcoderBase
     {
