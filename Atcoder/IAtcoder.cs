@@ -19,5 +19,14 @@ namespace Atcoder
         protected static readonly Func<long[]> ReadLongArray = () => Console.ReadLine().Split().Select(long.Parse).ToArray();
         protected static readonly Action<string> Cw = str => Console.WriteLine(str);
         protected const long COMDIV = 1000000007;
+        protected static T Max<T>(params T[] array) where T : IComparable
+        {
+            T ret = default;
+            foreach (var item in array)
+            {
+                ret = ret.CompareTo(item) > 0 ? ret : item;
+            }
+            return ret;
+        }
     }
 }
