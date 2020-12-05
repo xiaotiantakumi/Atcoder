@@ -7,34 +7,27 @@ namespace Atcoder.ABC106
         public override void Run()
         {
             var N = int.Parse(Console.ReadLine());
-            if (N == 105)
+            int ret = 0;
+            for (int i = 105; i <= N; i += 2)
             {
-                Console.WriteLine(1);
-                return;
-            }
-            else if (N < 105)
-            {
-                Console.WriteLine(0);
-                return;
-            }
-
-            int ret = 1;
-            for (int i = 106; i <= N; i++)
-            {
-                if (i % 2 == 0)
-                {
-                    continue;
-                }
-                int tmpRet = 0;
-                for (int j = 1; j <= N; j++)
+                var lim = (int)Math.Ceiling(Math.Sqrt(i));
+                int cntDiv = 0;
+                for (int j = 1; j <= lim; j++)
                 {
                     if (i % j == 0)
                     {
-                        tmpRet++;
+                        if (j == lim)
+                        {
+                            cntDiv++;
+                        }
+                        else
+                        {
+                            cntDiv += 2;
+                        }
                     }
                 }
 
-                if (tmpRet == 8)
+                if (cntDiv == 8)
                 {
                     ret++;
                 }
