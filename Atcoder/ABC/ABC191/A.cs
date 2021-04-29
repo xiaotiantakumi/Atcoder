@@ -8,15 +8,16 @@ namespace Atcoder.ABC.ABC191
         public override  void Run()
         {
             var VTSD = Console.ReadLine().Split().Select(int.Parse).ToArray();
-            var min = VTSD[0] * VTSD[1];
-            var max = VTSD[0] * VTSD[2];
-            if (min < VTSD[2] && VTSD[2] < max)
+            var start = VTSD[0] * VTSD[1];
+            var end = VTSD[0] * VTSD[2];
+            var D = VTSD[3];
+            if (D < start || D > end)
             {
-                Console.WriteLine("No");
+                Console.WriteLine("Yes");
             }
             else
             {
-                Console.WriteLine("Yes");
+                Console.WriteLine("No");
             }
         }
     }
