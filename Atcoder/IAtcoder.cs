@@ -47,5 +47,23 @@ namespace Atcoder
             a = b;
             b = tmp;
         }
+
+        // 最小公倍数
+        protected static long Lcm(long a, long b)
+        {
+            return a * (b / Gcd(a, b));
+        }
+        protected static long Gcd(long a, long b)
+        {
+            if (a < b)
+                return Gcd(b, a);
+            while (b != 0)
+            {
+                var remainder = a % b;
+                a = b;
+                b = remainder;
+            }
+            return a;
+        }
     }
 }
