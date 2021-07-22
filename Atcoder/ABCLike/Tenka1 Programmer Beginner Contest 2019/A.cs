@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.Tenka1_Programmer_Beginner_Contest_2019
 {
-    public class A : AtcoderBase
+    public class A : CoderBase
     {
         public override void Run()
         {

@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.NOMURAプログラミングコンテスト2020
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

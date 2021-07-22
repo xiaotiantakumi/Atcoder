@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.SoundHound_Inc_Programming_Contest_2018__Masters_Tournament
 {
-    public class E : AtcoderBase
+    public class E : CoderBase
     {
         public override void Run()
         {

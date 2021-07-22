@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CoderCommon;
 
 namespace Atcoder.ABC.ABC002
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

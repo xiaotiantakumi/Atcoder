@@ -1,6 +1,8 @@
-﻿namespace Atcoder.PAST._3
+﻿using CoderCommon;
+
+namespace Atcoder.PAST._3
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Collections.Generic;
+using CoderCommon;
 
 namespace Atcoder.Learning
 {
-    public class ATC001 : AtcoderBase
+    public class ATC001 : CoderBase
     {
         private static int H;
         private static int W;

@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.典型90
 {
-    public class No55 : AtcoderBase
+    public class No55 : CoderBase
     {
         public override  void Run()
         {
@@ -24,7 +25,7 @@ namespace Atcoder.典型90
                             for (int m = 0; m < l; ++m)
                             {
                                 // 以下部分をdecimalにするとTLEとなる。。
-                                if (1l * As[i] * As[j] % P * As[k] % P * As[l] % P * As[m] % P == NPQ[2]) ++ret;
+                                if (1L * As[i] * As[j] % P * As[k] % P * As[l] % P * As[m] % P == NPQ[2]) ++ret;
                             }
                         }
                     }

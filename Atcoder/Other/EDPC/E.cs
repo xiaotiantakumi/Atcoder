@@ -1,6 +1,8 @@
-﻿namespace Atcoder.Other.EDPC
+﻿using CoderCommon;
+
+namespace Atcoder.Other.EDPC
 {
-    public class E : AtcoderBase
+    public class E : CoderBase
     {
         public override void Run()
         {

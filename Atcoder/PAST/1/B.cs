@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoderCommon;
 
 namespace Atcoder.PAST._1
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

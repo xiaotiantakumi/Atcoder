@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.ARC.ARC069
 {
-    public class C : AtcoderBase
+    public class C : CoderBase
     {
         public override void Run()
         {

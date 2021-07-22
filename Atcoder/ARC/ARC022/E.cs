@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ARC.ARC022
+﻿using CoderCommon;
+
+namespace Atcoder.ARC.ARC022
 {
-    public class E : AtcoderBase
+    public class E : CoderBase
     {
         public override void Run()
         {

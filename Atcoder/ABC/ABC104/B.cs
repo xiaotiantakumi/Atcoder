@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Text.RegularExpressions;
+using CoderCommon;
 
 namespace Atcoder.ABC104
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

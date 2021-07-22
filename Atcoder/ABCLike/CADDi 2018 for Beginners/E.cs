@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.CADDi_2018_for_Beginners
 {
-    public class E : AtcoderBase
+    public class E : CoderBase
     {
         public override void Run()
         {

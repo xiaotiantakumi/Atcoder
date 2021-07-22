@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.ABC158
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

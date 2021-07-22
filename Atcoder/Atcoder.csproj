@@ -2,7 +2,22 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="TypicalAlgorithm\**" />
+    <EmbeddedResource Remove="TypicalAlgorithm\**" />
+    <None Remove="TypicalAlgorithm\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="IAtcoder.cs" />
+    <Compile Remove="Util.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CoderCommon\CoderCommon.csproj" />
+  </ItemGroup>
 
 </Project>

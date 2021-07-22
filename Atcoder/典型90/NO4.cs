@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.典型90
 {
-    public class NO4 : AtcoderBase
+    public class NO4 : CoderBase
     {
         public override  void Run()
         {

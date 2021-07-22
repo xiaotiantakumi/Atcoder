@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ABCLike.Num6Dowango
+﻿using CoderCommon;
+
+namespace Atcoder.ABCLike.Num6Dowango
 {
-    public class C : AtcoderBase
+    public class C : CoderBase
     {
         public override void Run()
         {

@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABC043
 {
-    public class A : AtcoderBase
+    public class A : CoderBase
     {
         public override void Run()
         {

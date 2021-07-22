@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.Other.CODE_FESTIVAL_2014_決勝
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

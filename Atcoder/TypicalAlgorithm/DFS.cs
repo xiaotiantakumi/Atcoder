@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.TypicalAlgorithm
 {
     //ABC130のDより
-    public class DFS : AtcoderBase
+    public class DFS : CoderBase
     {
         private int[] dx = new int[4]{ 1, 0, -1, 0 };
         private int[] dy = new int[4] { 0, 1, 0, -1 };

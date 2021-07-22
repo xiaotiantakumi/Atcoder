@@ -1,6 +1,8 @@
-﻿namespace Atcoder.Other.天下一プログラマーコンテスト2014予選A
+﻿using CoderCommon;
+
+namespace Atcoder.Other.天下一プログラマーコンテスト2014予選A
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

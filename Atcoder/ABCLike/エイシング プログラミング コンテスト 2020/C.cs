@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.エイシング_プログラミング_コンテスト_2020
 {
-    public class C : AtcoderBase
+    public class C : CoderBase
     {
         public override void Run()
         {

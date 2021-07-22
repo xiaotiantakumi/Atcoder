@@ -1,10 +1,11 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.典型90
 {
-    public class No25 : AtcoderBase
+    public class No25 : CoderBase
     {
         public override  void Run()
         {

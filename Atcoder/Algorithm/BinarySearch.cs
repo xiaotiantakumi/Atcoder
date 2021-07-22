@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using CoderCommon;
 
 namespace Atcoder.Algorithm
 {
     // ABC146のC
-    class BinarySearch : AtcoderBase
+    class BinarySearch : CoderBase
     {
         public override void Run()
         {

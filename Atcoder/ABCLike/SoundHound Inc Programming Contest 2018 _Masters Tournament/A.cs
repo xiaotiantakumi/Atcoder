@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.SoundHound_Inc_Programming_Contest_2018__Masters_Tournament
 {
-    public class A : AtcoderBase
+    public class A : CoderBase
     {
         public override void Run()
         {

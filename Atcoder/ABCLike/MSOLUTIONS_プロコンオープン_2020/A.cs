@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.MSOLUTIONS_プロコンオープン_2020
 {
-    public class A : AtcoderBase
+    public class A : CoderBase
     {
         public override void Run()
         {

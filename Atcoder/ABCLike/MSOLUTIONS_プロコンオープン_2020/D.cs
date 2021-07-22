@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.MSOLUTIONS_プロコンオープン_2020
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

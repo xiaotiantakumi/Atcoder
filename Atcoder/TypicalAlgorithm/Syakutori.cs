@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.TypicalAlgorithm
 {
     //ABC130のDより
-    public class Syakutori : AtcoderBase
+    public class Syakutori : CoderBase
     {
         public override void Run()
         {

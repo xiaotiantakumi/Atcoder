@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ARC.diverta_2019_Programming_Contest
+﻿using CoderCommon;
+
+namespace Atcoder.ARC.diverta_2019_Programming_Contest
 {
-    public class C : AtcoderBase
+    public class C : CoderBase
     {
         public override void Run()
         {

@@ -1,12 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.IO;
-using System.IO.MemoryMappedFiles;
+using System.Data;
 using System.Linq;
-using System.Numerics;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
 
 namespace Atcoder
 {
@@ -17,28 +12,33 @@ namespace Atcoder
 
         static void Main(string[] args)
         {
-            var basePath = @"C:\Users\xiaot\source\repos\Atcoder\Atcoder\典型90";
-            var path = Path.Combine(basePath,"1.cs");
-            if (File.Exists(path))
-            {
-                
-                for (int i = 10; i <= 90; i++)
-                {
-                    var fileName = i.ToString() + ".cs";
-                    var filePath = Path.Combine(basePath, fileName);
-                    if (!File.Exists(filePath)) continue;
-                    var rawContent = File.ReadAllLines(filePath);
-                    for (var index = 0; index < rawContent.Length; index++)
-                    {
-                        rawContent[index] = rawContent[index].Replace("No6", "No" + i.ToString());
-                    }
+            var NW = Console.ReadLine().Split().Select(int.Parse).ToArray();
+            var N = NW[0];
+            var W = NW[1];
+            int[,] dp = new int[N+1,W+1];
+            int[] ws = new int[N+1];
+            int[] vs = new int[N+1];
 
-                    var s = File.OpenWrite(filePath);
-                    var streamWriter = new StreamWriter(s);
-                    streamWriter.WriteLine(string.Join("\r\n", rawContent));
-                    streamWriter.Flush();
-                }
+            for (int i = 1; i <= N; i++)
+            {
+                var wv = Console.ReadLine().Split().Select(int.Parse).ToArray();
+                ws[i] = wv[0];
+                vs[i] = wv[1];
             }
+            for (int i = 1; i <= N; i++)
+            {
+                for (int v = 0; v <= vs.Sum(); v++)
+                {
+                    dp[i, v] = dp[i - 1, v];
+                    if (v - vs[i] >= 0)
+                    {
+                        dp[i,v] = Math.Max(dp[i,v],dp[i - 1,v - ws[i]] + vs[i]);
+                    }
+                }
+
+            }
+            
+            Console.WriteLine(dp[N,W]);
         }
     }
 }

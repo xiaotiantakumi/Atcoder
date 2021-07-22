@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ABCLike.エイシング_プログラミング_コンテスト_2019
+﻿using CoderCommon;
+
+namespace Atcoder.ABCLike.エイシング_プログラミング_コンテスト_2019
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

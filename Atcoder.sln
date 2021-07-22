@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.28803.202
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Atcoder", "Atcoder\Atcoder.csproj", "{0F402182-EF71-4D56-A87C-743F5D1AFF43}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "yukicoder", "yukicoder\yukicoder.csproj", "{9DE6F5AF-B0E1-4CED-BB2E-2AE9006D79B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoderCommon", "CoderCommon\CoderCommon.csproj", "{12842347-0397-49C9-BBD1-9CCBA2A6C0F9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{0F402182-EF71-4D56-A87C-743F5D1AFF43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F402182-EF71-4D56-A87C-743F5D1AFF43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F402182-EF71-4D56-A87C-743F5D1AFF43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DE6F5AF-B0E1-4CED-BB2E-2AE9006D79B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DE6F5AF-B0E1-4CED-BB2E-2AE9006D79B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DE6F5AF-B0E1-4CED-BB2E-2AE9006D79B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DE6F5AF-B0E1-4CED-BB2E-2AE9006D79B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12842347-0397-49C9-BBD1-9CCBA2A6C0F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12842347-0397-49C9-BBD1-9CCBA2A6C0F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12842347-0397-49C9-BBD1-9CCBA2A6C0F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12842347-0397-49C9-BBD1-9CCBA2A6C0F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

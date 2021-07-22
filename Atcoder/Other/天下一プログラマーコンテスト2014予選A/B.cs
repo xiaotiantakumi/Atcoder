@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.Other.天下一プログラマーコンテスト2014予選A
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

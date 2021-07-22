@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.MyTest
 {
-    public class A20200123 : AtcoderBase
+    public class A20200123 : CoderBase
     {
         public override void Run()
         {

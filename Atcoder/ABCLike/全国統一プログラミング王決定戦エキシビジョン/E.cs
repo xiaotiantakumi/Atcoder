@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.全国統一プログラミング王決定戦エキシビジョン
 {
-    public class E : AtcoderBase
+    public class E : CoderBase
     {
         public override void Run()
         {

@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.パナソニックプログラミングコンテスト2020
 {
-    public class E : AtcoderBase
+    public class E : CoderBase
     {
         public override void Run()
         {

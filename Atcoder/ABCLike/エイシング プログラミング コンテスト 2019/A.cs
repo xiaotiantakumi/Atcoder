@@ -1,8 +1,9 @@
 ﻿using System;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.エイシング_プログラミング_コンテスト_2019
 {
-    public class A : AtcoderBase
+    public class A : CoderBase
     {
         public override void Run()
         {

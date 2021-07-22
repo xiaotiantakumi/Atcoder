@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ABCLike.keyence2020
+﻿using CoderCommon;
+
+namespace Atcoder.ABCLike.keyence2020
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ABC.ABC197
+﻿using CoderCommon;
+
+namespace Atcoder.ABC.ABC197
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

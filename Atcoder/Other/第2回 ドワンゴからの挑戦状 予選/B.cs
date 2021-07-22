@@ -1,6 +1,8 @@
-﻿namespace Atcoder.Other.第2回_ドワンゴからの挑戦状_予選
+﻿using CoderCommon;
+
+namespace Atcoder.Other.第2回_ドワンゴからの挑戦状_予選
 {
-    public class B : AtcoderBase
+    public class B : CoderBase
     {
         public override void Run()
         {

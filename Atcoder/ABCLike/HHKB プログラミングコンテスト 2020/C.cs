@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using CoderCommon;
 
 namespace Atcoder.ABCLike.HHKB_プログラミングコンテスト_2020
 {
-    public class C : AtcoderBase
+    public class C : CoderBase
     {
         public override void Run()
         {

@@ -1,6 +1,8 @@
-﻿namespace Atcoder.Other
+﻿using CoderCommon;
+
+namespace Atcoder.Other
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {

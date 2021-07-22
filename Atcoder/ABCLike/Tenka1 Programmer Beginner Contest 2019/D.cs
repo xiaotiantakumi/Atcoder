@@ -1,6 +1,8 @@
-﻿namespace Atcoder.ABCLike.Tenka1_Programmer_Beginner_Contest_2019
+﻿using CoderCommon;
+
+namespace Atcoder.ABCLike.Tenka1_Programmer_Beginner_Contest_2019
 {
-    public class D : AtcoderBase
+    public class D : CoderBase
     {
         public override void Run()
         {
