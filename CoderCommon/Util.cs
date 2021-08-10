@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CoderCommon
 {
-    static class Util
+    public static class Util
     {
         // 最小公倍数
         public static long Lcm(long a, long b)
@@ -95,5 +96,22 @@ namespace CoderCommon
             if (n != 1) yield return n;
         }
 
+        /// <summary>
+        /// 座標圧縮
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="raw"></param>
+        /// <returns></returns>
+        static private List<int> CoordinateCompression<T>(List<T> raw) where T : struct
+        {
+            var values = raw.Distinct().OrderBy(x => x).ToList();
+            List<int> result = new List<int>();
+            foreach (var t in raw)
+            {
+                var index = values.BinarySearch(t);
+                result.Add(values.BinarySearch(t));
+            }
+            return result;
+        }
     }
 }
