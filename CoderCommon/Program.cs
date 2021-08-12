@@ -6,7 +6,6 @@ namespace CoderCommon
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
         }
     }
 }
