@@ -2,9 +2,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
-namespace Atcoder.Algorithm
+namespace CoderCommon.Library
 {
     public class PriorityQueue<T> : IEnumerable<T>
     {
