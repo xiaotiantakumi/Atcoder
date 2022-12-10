@@ -1,9 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO.MemoryMappedFiles;
 using System.Linq;
 using System.Runtime.InteropServices;
+using Atcoder.Algorithm;
 using CoderCommon;
+using CoderCommon.Library;
 using Microsoft.VisualBasic.CompilerServices;
 using Console = System.Console;
 
@@ -16,36 +19,23 @@ namespace Atcoder
         static void Main()
         {
             SourceExpander.Expander.Expand(ignoreAnyError: false);
-            var N = int.Parse(Console.ReadLine());
-            List<long[]> treeInfo = new List<long[]>();
-            for (int i = 0; i < N - 1; i++)
+            int[] a = new[] { 7,5,3,1,8};
+            var N = a.Length - 1;
+            int A = 12;
+            int[,] dp = new int[N+1, 1000100];
+            dp[0, 0] = 1;
+            var MOD = 1000000009;
+            for (int i = 0; i < N; i++)
             {
-                var AB = Console.ReadLine().Split().Select(long.Parse).ToArray();
-                treeInfo.Add(AB);
-            }
-
-            var dicNode = GraphUtil.CreateTree(treeInfo);
-            List<long> history = new List<long>();
-            dicNode[1].IsArrive = true;
-            Execute(dicNode[1], history);
-            Console.WriteLine(string.Join(" ",history));
-        }
-
-        private static void Execute(Node<long> currentNode,List<long> history)
-        {
-            history.Add(currentNode.Value);
-            if (currentNode.Children != null)
-            {
-                var items = currentNode.Children.OrderBy(x => x.Value).ToList();
-                for (int i = 0; i < items.Count; i++)
+                for (int j = 0; j <= A; j++)
                 {
-                    var next = items[i];
-                    if (next.IsArrive) continue;
-                    next.IsArrive = true;
-                    Execute(next, history);
-                    history.Add(currentNode.Value);
+                    dp[i + 1,j] += dp[i,j] %= MOD;
+                    if (j >= a[i]) dp[i + 1, j] += dp[i, j - a[i]] %= MOD;
                 }
             }
+            Console.WriteLine(dp[N,A]);
         }
+        
     }
+    
 }
